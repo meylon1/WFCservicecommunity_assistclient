@@ -1,0 +1,12 @@
+﻿body {
+
+
+    border-style:double;    
+    background-position:center; 
+    border-width :thick; 
+    background-image: url(donations.jpg);
+    background-color:mediumturquoise;
+    border-image-width :auto;
+   
+
+}
