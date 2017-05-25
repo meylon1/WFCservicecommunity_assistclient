@@ -11,23 +11,20 @@ public partial class GrantView : System.Web.UI.Page
     clientServiceReference.IcommunityServiceClient sc = new clientServiceReference.IcommunityServiceClient();
     protected void Page_Load(object sender, EventArgs e)
     {
-     
 
-
-
-
+        if (Session["userkey"] == null)
+            Response.Redirect("Default.aspx");
+        GetGrants();
 
     }
 
-    protected void GrantDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    protected void GetGrants()
 
     {
+        int key = (int)Session["userkey"];
 
-        clientServiceReference.GrantReview[] Grant =
-
-          
-
+        clientServiceReference.GrantRequest[] Grant = sc.ReviewG(key);
         GridView1.DataSource = Grant;
-
         GridView1.DataBind();
     }
+}

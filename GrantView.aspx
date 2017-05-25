@@ -12,9 +12,8 @@
         <h1> Grants</h1>
         
 
-        <asp:DropDownList ID="GrantDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="GrantDropDownList_SelectedIndexChanged"></asp:DropDownList>
-         <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-        <asp:GridView ID="GridView2" runat="server"></asp:GridView>
+         <asp:GridView ID="GridView1" runat="server" BorderColor="DeepSkyBlue" BackColor="Plum"></asp:GridView>
+      
     
     </div>
     </form>
